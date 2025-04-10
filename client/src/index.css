@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-[#111827] text-gray-100;
+  }
+
+  :root {
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 210 40% 98%;
+    
+    --primary-blue: 222.2 47.4% 40%;
+    --primary-purple: 263 70% 50%;
+    
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 215 100% 50%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2, 32.6%, 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 170 100% 30%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+ 
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#1e40af] to-[#6d28d9] bg-clip-text text-transparent;
+  }
+  
+  .secondary-gradient-text {
+    @apply bg-gradient-to-r from-[#3b82f6] to-[#0d9488] bg-clip-text text-transparent;
+  }
+  
+  .primary-gradient-btn {
+    @apply bg-gradient-to-r from-[#1e40af] to-[#6d28d9] hover:shadow-lg hover:shadow-[#6d28d9]/20 transition-all;
+  }
+  
+  .section-container {
+    @apply container mx-auto px-4 md:px-6 py-20;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold mb-3;
+  }
+  
+  .section-title-underline {
+    @apply w-20 h-1 bg-gradient-to-r from-[#1e40af] to-[#6d28d9] mx-auto;
+  }
+  
+  .text-gradient-primary {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#3b82f6] to-[#6d28d9];
+  }
+  
+  .skills-category-item {
+    @apply bg-[#111827] p-3 rounded-lg text-center hover:bg-[#1f2937] hover:shadow-md transition-all cursor-default;
+  }
+}
